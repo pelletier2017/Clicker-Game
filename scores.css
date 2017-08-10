@@ -1,0 +1,30 @@
+.displayscores {
+  width: 500px;
+  height: 550px;
+  background-color: #66ff33;
+  margin: 10px;
+  padding: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #000099;
+}
+ 
+/*achievement table*/
+table, td {
+  height: 100px;
+  width: 100px;
+  border: solid 3px;
+  border-color: red;
+  border-width: 2px;
+  /*background-color: red;*/
+}
+table {
+  border: solid 3px;
+  border-color:black;
+  background-color: red;
+}
+ 
+td {
+  background-color: #66ff33;
+  width: "30%";
+}
