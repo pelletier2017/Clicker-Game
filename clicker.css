@@ -1,0 +1,196 @@
+#addpoints {
+    background-color: red;
+    border: none;
+    font-size: 14px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font: Verdana;
+}
+ 
+#btn_multiply {
+    background-color: purple;
+    border: none;
+    font-size: 14px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font: Verdana;
+}
+ 
+#multiply2 {
+    background-color: purple;
+    border: none;
+    font-size: 14px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font: Verdana;
+}
+ 
+#multiply3 {
+    background-color: purple;
+    border: none;
+    font-size: 14px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font: Verdana;
+}
+ 
+#firstbuild {
+    background-color: orange;
+    border: none;
+    font-size: 14px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font: Verdana;
+}
+ 
+#secondbuild {
+    background-color: yellow;
+    border: none;
+    font-size: 14px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font: Verdana;
+}
+ 
+#thirdbuild {
+    background-color: lime;
+    border: none;
+    font-size: 14px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font: Verdana;
+}
+ 
+#fourthbuild {
+    background-color: aqua;
+    border: none;
+    font-size: 14px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font: Verdana;
+}
+ 
+#fifthbuild {
+    background-color: #0033cc;
+    border: none;
+    font-size: 14px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font: Verdana;
+}
+ 
+#sixthbuild {
+    background-color: #cc33ff;
+    border: none;
+    font-size: 14px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font: Verdana;
+}
+ 
+#seventhbuild {
+    background-color: #a1194b;
+    border: none;
+    font-size: 14px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font: Verdana;
+}
+ 
+#firstbuildmulti1 {
+    background-color: #ff6666;
+    border: none;
+    font-size: 14px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font: Verdana;
+}
+ 
+#secondbuildmulti1 {
+    background-color: #99ff33;
+    border: none;
+    font-size: 14px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font: Verdana;
+}
+ 
+#thirdbuildmulti1 {
+    background-color: #b4ffff;
+    border: none;
+    font-size: 14px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font: Verdana;
+}
+ 
+div.tab {
+    overflow: hidden;
+    /*border: 1px solid #ccc;*/
+}
+ 
+/* Style the buttons inside the tab */
+div.tab button {
+    background-color: #ffcc00;
+    float: left;
+    /*border: solid 5px;*/
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+ 
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #ff5050;
+}
+ 
+/* Create an active/current tablink class */
+div.tab .active {
+    background-color: #ccc;
+}
+ 
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    /*border: 1px solid #ccc;
+    border-top: none;*/
+}
+ 
+body {
+  background-color: #00aae6;
+}
+ 
+.displayscores {
+  width: 500px;
+  height: 550px;
+  background-color: #66ff33;
+  margin: 10px;
+  padding: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #000099;
+}
+ 
+/*achievement table*/
+table, td {
+  height: 100px;
+  width: 100px;
+  border: solid 3px;
+  border-color: red;
+  border-width: 2px;
+  /*background-color: red;*/
+}
+table {
+  border: solid 3px;
+  border-color:black;
+  background-color: red;
+}
+ 
+td {
+  background-color: #66ff33;
+  width: "30%";
+}
