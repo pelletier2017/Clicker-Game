@@ -1,112 +1,112 @@
-<!DOCTYPE html>
-<html>
-<body>
-<!-- testing if I changed the file-->
-<p>Click to get started!</p>
+    <!DOCTYPE html>
+    <html>
+    <body>
 
-<!--Link to all CSS files -->
-<link rel="stylesheet" href="buttons.css">
-<link rel="stylesheet" href="scores.css">
-<link rel="stylesheet" href="layout.css">
+    <p>Click to get started!</p>
+    
+    <!--Link to all CSS files -->
+    <link rel="stylesheet" href="buttons2.css">
+    <!--<link rel="stylesheet" href="displayscores.css">-->
+    <link rel="stylesheet" href="layout.css">
+    
+    <!-- make all buttons -->
 
-<!--Link to javascript files -->
-<script src="buildings.js"></script>
-
-<!-- make all buttons -->
-<button id="addpoints" onclick="addPoints()" background-color: red>Slice some bread!</button>
-
-<button id="firstbuild" onclick="build1()" style="display:none;">Bread slicer. Cost x</button>
-
-<button id="secondbuild" onclick="build2()" style="display:none;">Sandwich bread machine. Cost x</button>
-
-<button id="thirdbuild" onclick="build3()" style="display:none;">Crouton maker. Cost x</button>
-
-<button id="fourthbuild" onclick="build4()" style="display:none;">Roll factory. Cost x</button>
-
-<button id="fifthbuild" onclick="build5()" style="display:none;">Baguette oven. Cost x</button>
-
-<button id="sixthbuild" onclick="build6()" style="display:none;">Bagel production line. Cost x</button>
-
-<button id="seventhbuild" onclick="build7()" style="display:none;">Soft pretzel manufacturer. Cost x</button>
-
-<br>
-<p><b>Upgrades:</b></p>
-
-<button id="btn_multiply" onclick="firstx2()" style="display:none;">x2 Multiplier. Cost: 100</button>
-
-<button id="multiply2" onclick="secondx2()" style="display:none;">x2 Multiplier. Cost: 1000</button>
-
-<button id="multiply3" onclick="thirdx2()" style="display:none;">x2 Multiplier. Cost: 5000</button>
-
-<button id="firstbuildmulti1" onclick="build1multi1()" style="display:none;">Sliced bread x2 multiplier. Cost x</button>
-
-<button id="secondbuildmulti1" onclick="build2multi1()" style="display:none;">Sandwich bread x2 multiplier. Cost x</button>
-
-<button id="thirdbuildmulti1" onclick="build3multi1()" style="display:none;">Crouton maker x2 multiplier. Cost x</button>
-
-
-
-<!-- make a div around all paragraphs displaying stats and display them -->
-<div class="displayscores">
-  <div class="tab">
-	<button class="tablinks" onclick="switchtab(event, 'main')">Main Page</button>
-	<button class="tablinks" onclick="switchtab(event, 'stats')">Stats</button>
-	<button class="tablinks" onclick="switchtab(event, 'achievements')">Achievements</button>
-  </div>
- 
-  <div id="main" class="tabcontent">
-  <p id="pointdisplay"></p>
-  <p id="multidisplay"></p>
-  <p id="b1"></p>
-  <p id="b2"></p>
-  <p id="b3"></p>
-  <p id="b4"></p>
-  <p id="b5"></p>
-  <p id="b6"></p>
-  <p id="b7"></p>
-  <p id="ppstotal"></p>
-  </div>
- 
-  <div id="stats" class="tabcontent">
-  <p id="clickcount"></p>
-  <p id="pointsfromclick"></p>
-  <p id="totalpointcount"></p>
-  <p id="totalbuild"></p>
-  </div>
- 
-  <div id="achievements" class="tabcontent">
-  <!--<p id="idlater"></p>-->
-  <table height: 300px; width: 300px>
-	<tr>
-	  <td align="center">Achievement has not been unlocked yet.</td>
-	  <td align="center">Achievement has not been unlocked yet.</td>
-	  <td align="center">Achievement has not been unlocked yet.</td>
-	  <td align="center">Achievement has not been unlocked yet.</td>
-	  <td align="center">Achievement has not been unlocked yet.</td>
-	</tr>
-	<tr>
-	  <td align="center">Achievement has not been unlocked yet.</td>
-	  <td align="center">Achievement has not been unlocked yet.</td>
-	  <td align="center">Achievement has not been unlocked yet.</td>
-	  <td align="center">Achievement has not been unlocked yet.</td>
-	  <td align="center">Achievement has not been unlocked yet.</td>
-	</tr>
-	<tr>
-	  <td align="center">Achievement has not been unlocked yet.</td>
-	  <td align="center">Achievement has not been unlocked yet.</td>
-	  <td align="center">Achievement has not been unlocked yet.</td>
-	  <td align="center">Achievement has not been unlocked yet.</td>
-	  <td align="center">Achievement has not been unlocked yet.</td>
-	</tr>
-	<tr>
-	  <td align="center">Achievement has not been unlocked yet.</td>
-	  <td align="center">Achievement has not been unlocked yet.</td>
-	  <td align="center">Achievement has not been unlocked yet.</td>
-	  <td align="center">Achievement has not been unlocked yet.</td>
-	  <td align="center">Achievement has not been unlocked yet.</td>
-	</tr>
-  </table>
-  </div>
-</div>
-</body>
-</html>
+    <button id="addpoints"  onclick="addPoints()" background-color: red>Slice some bread!</button>
+    
+    <button id="firstbuild" onclick="build1()" style="display:none;">Bread slicer. Cost x</button>
+    
+    <button id="secondbuild" onclick="build2()" style="display:none;">Sandwich bread machine. Cost x</button>
+    
+    <button id="thirdbuild" onclick="build3()" style="display:none;">Crouton maker. Cost x</button>
+    
+    <button id="fourthbuild" onclick="build4()" style="display:none;">Roll factory. Cost x</button>
+    
+    <button id="fifthbuild" onclick="build5()" style="display:none;">Baguette oven. Cost x</button>
+    
+    <button id="sixthbuild" onclick="build6()" style="display:none;">Bagel production line. Cost x</button>
+    
+    <button id="seventhbuild" onclick="build7()" style="display:none;">Soft pretzel manufacturer. Cost x</button>
+    <br>
+    <p><b>Upgrades:</b></p>
+    
+    <button id="btn_multiply" onclick="firstx2()" style="display:none;">x2 Multiplier. Cost: 100</button>
+    
+    <button id="multiply2" onclick="secondx2()" style="display:none;">x2 Multiplier. Cost: 1000</button>
+    
+    <button id="multiply3" onclick="thirdx2()" style="display:none;">x2 Multiplier. Cost: 5000</button>
+    
+    <button id="firstbuildmulti1" onclick="build1multi1()" style="display:none;">Sliced bread x2 multiplier. Cost x</button>
+    
+    <button id="secondbuildmulti1" onclick="build2multi1()" style="display:none;">Sandwich bread x2 multiplier. Cost x</button>
+    
+    <button id="thirdbuildmulti1" onclick="build3multi1()" style="display:none;">Crouton maker x2 multiplier. Cost x</button>
+    
+    <script src="buildings.js"></script>
+    <!-- make a div around all paragraphs displaying stats and display them -->
+    <div class="displayscores">
+      <div class="tab">
+        <button class="tablinks" onclick="switchtab(event, 'main')">Main Page</button>
+        <button class="tablinks" onclick="switchtab(event, 'stats')">Stats</button>
+        <button class="tablinks" onclick="switchtab(event, 'achievements')">Achievements</button>
+      </div>
+      
+      <div id="main" class="tabcontent">
+      <p id="pointdisplay"></p>
+      <p id="multidisplay"></p>
+      <p id="ppstotal"></p>
+      <p id="b1"></p>
+      <p id="b2"></p>
+      <p id="b3"></p>
+      <p id="b4"></p>
+      <p id="b5"></p>
+      <p id="b6"></p>
+      <p id="b7"></p>
+      </div>
+      
+      <div id="stats" class="tabcontent">
+      <p id="clickcount"></p>
+      <p id="pointsfromclick"></p>
+      <p id="totalpointcount"></p>
+      <p id="totalbuild"></p>
+      </div>
+      
+      <div id="achievements" class="tabcontent">
+      <!--<p id="idlater"></p>-->
+      <table height: 300px; width: 300px>
+        <tr>
+          <td align="center">Achievement has not been unlocked yet.</td>
+          <td align="center">Achievement has not been unlocked yet.</td>
+          <td align="center">Achievement has not been unlocked yet.</td>
+          <td align="center">Achievement has not been unlocked yet.</td>
+          <td align="center">Achievement has not been unlocked yet.</td>
+        </tr>
+        <tr>
+          <td align="center">Achievement has not been unlocked yet.</td>
+          <td align="center">Achievement has not been unlocked yet.</td>
+          <td align="center">Achievement has not been unlocked yet.</td>
+          <td align="center">Achievement has not been unlocked yet.</td>
+          <td align="center">Achievement has not been unlocked yet.</td>
+        </tr>
+        <tr>
+          <td align="center">Achievement has not been unlocked yet.</td>
+          <td align="center">Achievement has not been unlocked yet.</td>
+          <td align="center">Achievement has not been unlocked yet.</td>
+          <td align="center">Achievement has not been unlocked yet.</td>
+          <td align="center">Achievement has not been unlocked yet.</td>
+        </tr>
+        <tr>
+          <td align="center">Achievement has not been unlocked yet.</td>
+          <td align="center">Achievement has not been unlocked yet.</td>
+          <td align="center">Achievement has not been unlocked yet.</td>
+          <td align="center">Achievement has not been unlocked yet.</td>
+          <td align="center">Achievement has not been unlocked yet.</td>
+        </tr>
+      </table>
+      </div>
+    </div>
+    
+    <!--<div id="changes">
+      <p>Hello</p>
+    </div>-->
+    </body>
+    </html>
