@@ -5,43 +5,51 @@
     <p>Click to get started!</p>
     
     <!--Link to all CSS files -->
-    <link rel="stylesheet" href="buttons2.css">
+    <link rel="stylesheet" href="changes.css">
     <!--<link rel="stylesheet" href="displayscores.css">-->
     <link rel="stylesheet" href="layout.css">
     
     <!-- make all buttons -->
 
-    <button id="addpoints"  onclick="addPoints()" background-color: red>Slice some bread!</button>
+    <button id="addpoints"  class="button zero" onclick="addPoints()" background-color: red>Slice some bread!</button>
     
-    <button id="firstbuild" onclick="build1()" style="display:none;">Bread slicer. Cost x</button>
+    <button id="firstbuild" class="button first" onclick="build1()" style="display:none;">Bread slicer. Cost x</button>
     
-    <button id="secondbuild" onclick="build2()" style="display:none;">Sandwich bread machine. Cost x</button>
+    <button id="secondbuild" class="button second" onclick="build2()" style="display:none;">Sandwich bread machine. Cost x</button>
     
-    <button id="thirdbuild" onclick="build3()" style="display:none;">Crouton maker. Cost x</button>
+    <button id="thirdbuild" class="button third" onclick="build3()" style="display:none;">Crouton maker. Cost x</button>
     
-    <button id="fourthbuild" onclick="build4()" style="display:none;">Roll factory. Cost x</button>
+    <button id="fourthbuild" class="button fourth" onclick="build4()" style="display:none;">Roll factory. Cost x</button>
     
-    <button id="fifthbuild" onclick="build5()" style="display:none;">Baguette oven. Cost x</button>
+    <button id="fifthbuild" class="button fifth" onclick="build5()" style="display:none;">Baguette oven. Cost x</button>
     
-    <button id="sixthbuild" onclick="build6()" style="display:none;">Bagel production line. Cost x</button>
+    <button id="sixthbuild" class="button sixth" onclick="build6()" style="display:none;">Bagel production line. Cost x</button>
     
-    <button id="seventhbuild" onclick="build7()" style="display:none;">Soft pretzel manufacturer. Cost x</button>
+    <button id="seventhbuild" class="button seventh" onclick="build7()" style="display:none;">Soft pretzel manufacturer. Cost x</button>
     <br>
     <p><b>Upgrades:</b></p>
     
-    <button id="btn_multiply" onclick="firstx2()" style="display:none;">x2 Multiplier. Cost: 100</button>
+    <button id="btn_multiply" class="button zero" onclick="firstx2()" style="display:none;">x2 Multiplier. Cost: 100</button>
     
-    <button id="multiply2" onclick="secondx2()" style="display:none;">x2 Multiplier. Cost: 1000</button>
+    <button id="multiply2" class="button zero" onclick="secondx2()" style="display:none;">x2 Multiplier. Cost: 1000</button>
     
-    <button id="multiply3" onclick="thirdx2()" style="display:none;">x2 Multiplier. Cost: 5000</button>
+    <button id="multiply3" class="button zero" onclick="thirdx2()" style="display:none;">x2 Multiplier. Cost: 5000</button>
     
-    <button id="firstbuildmulti1" onclick="build1multi1()" style="display:none;">Sliced bread x2 multiplier. Cost x</button>
+    <button id="b1c1" class="button first" onclick="b1m1()" style="display:none;">x2 Multiplier. Cost: 500</button>
     
-    <button id="secondbuildmulti1" onclick="build2multi1()" style="display:none;">Sandwich bread x2 multiplier. Cost x</button>
+    <button id="b2c1" class="button second" onclick="b2m1()" style="display:none;">x2 Multiplier. Cost: 2500</button>
     
-    <button id="thirdbuildmulti1" onclick="build3multi1()" style="display:none;">Crouton maker x2 multiplier. Cost x</button>
+    <button id="b3c1" class="button third" onclick="b3m1()" style="display:none;">x2 Multiplier. Cost: 5000</button>
     
-    <script src="buildings.js"></script>
+    <button id="b4c1" class="button fourth" onclick="b4m1()" style="display:none;">x2 Multiplier. Cost: 11500</button>
+    
+    <button id="b5c1" class="button fifth" onclick="b5m1()" style="display:none;">x2 Multiplier. Cost: 25000</button>
+    
+    <button id="b6c1" class="button sixth" onclick="b6m1()" style="display:none;">x2 Multiplier. Cost: 62500</button>
+    
+    <button id="b7c1" class="button seventh" onclick="b7m1()" style="display:none;">x2 Multiplier. Cost: 150000</button>
+    
+    <script src="changes.js"></script>
     <!-- make a div around all paragraphs displaying stats and display them -->
     <div class="displayscores">
       <div class="tab">
