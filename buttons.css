@@ -1,5 +1,4 @@
-#addpoints {
-    background-color: red;
+.button {
     border: none;
     font-size: 14px;
     padding: 12px 18px;
@@ -8,192 +7,69 @@
     font-size: 17px;
 }
 
-#addpoints:hover {
+.zero {
+  background-color: red;
+}
+
+.first {
+  background-color: orange;
+}
+
+.second {
+  background-color: yellow;
+}
+
+.third {
+  background-color: lime;
+}
+
+.fourth {
+  background-color: aqua;
+}
+
+.fifth {
+  background-color: #0033cc;
+}
+
+.sixth {
+  background-color: #cc33ff;
+  margin-top: 6px;
+}
+
+.seventh {
+  background-color: #a1194b;
+}
+
+.zero:hover {
   background-color: #f30000;
 }
 
-#btn_multiply {
-    background-color: purple;
-    border: none;
-    font-size: 14px;
-    padding: 12px 18px;
-    border-radius: 8px;
-    font: Verdana;
-    font-size: 17px;
-}
-
-#btn_multiply:hover {
-  background-color: #69007e;
-}
-
-#multiply2 {
-    background-color: purple;
-    border: none;
-    font-size: 14px;
-    padding: 12px 18px;
-    border-radius: 8px;
-    font: Verdana;
-    font-size: 17px;
-}
-
-#multiply2:hover {
-  background-color: #69007e;
-}
-
-#multiply3 {
-    background-color: purple;
-    border: none;
-    font-size: 14px;
-    padding: 12px 18px;
-    border-radius: 8px;
-    font: Verdana;
-    font-size: 17px;
-}
-
-#multiply3:hover {
-  background-color:#69007e;
-}
-
-#firstbuild {
-    background-color: orange;
-    border: none;
-    font-size: 14px;
-    padding: 12px 18px;
-    border-radius: 8px;
-    font: Verdana;
-    font-size: 17px;
-}
-
-#firstbuild:hover {
+.first:hover {
   background-color: #ff8100;
 }
 
-#secondbuild {
-    background-color: yellow;
-    border: none;
-    font-size: 14px;
-    padding: 12px 18px;
-    border-radius: 8px;
-    font: Verdana;
-    font-size: 17px;
-}
-
-#secondbuild:hover {
+.second:hover {
   background-color: #ffed00;
 }
 
-#thirdbuild {
-    background-color: lime;
-    border: none;
-    font-size: 14px;
-    padding: 12px 18px;
-    border-radius: 8px;
-    font: Verdana;
-    font-size: 17px;
-}
-
-#thirdbuild:hover {
+.third:hover {
   background-color: #00f300;
 }
 
-#fourthbuild {
-    background-color: aqua;
-    border: none;
-    font-size: 14px;
-    padding: 12px 18px;
-    border-radius: 8px;
-    font: Verdana;
-    font-size: 17px;
-}
-
-#fourthbuild:hover {
+.fourth:hover {
   background-color: #00f1ff;
 }
 
-#fifthbuild {
-    background-color: #0033cc;
-    border: none;
-    font-size: 14px;
-    padding: 12px 18px;
-    border-radius: 8px;
-    font: Verdana;
-    font-size: 17px;
-}
-
-#fifthbuild:hover {
+.fifth:hover {
   background-color:#0033aa;
 }
 
-#sixthbuild {
-    background-color: #cc33ff;
-    border: none;
-    font-size: 14px;
-    padding: 12px 18px;
-    border-radius: 8px;
-    font: Verdana;
-    font-size: 17px;
-    margin-top:5px;
-}
-
-#sixthbuild:hover {
+.sixth:hover {
   background-color: #cc33d1;
 }
 
-#seventhbuild {
-    background-color: #a1194b;
-    border: none;
-    font-size: 14px;
-    padding: 12px 18px;
-    border-radius: 8px;
-    font: Verdana;
-    font-size: 17px;
-    margin-top:5px;
-}
-
-#seventhbuild:hover {
+.seventh:hover {
   background-color: #85194b;
-}
-
-#firstbuildmulti1 {
-    background-color: #ff6666;
-    border: none;
-    font-size: 14px;
-    padding: 12px 18px;
-    border-radius: 8px;
-    font: Verdana;
-    font-size: 17px;
-}
-
-#firstbuildmulti1:hover {
-  background-color: #ff4264;
-}
-
-#secondbuildmulti1 {
-    background-color: #99ff33;
-    border: none;
-    font-size: 14px;
-    padding: 12px 18px;
-    border-radius: 8px;
-    font: Verdana;
-    font-size: 17px;
-}
-
-#secondbuildmulti1:hover {
-  background-color: #99e633;
-}
-
-#thirdbuildmulti1 {
-    background-color: #b4ffff;
-    border: none;
-    font-size: 14px;
-    padding: 12px 18px;
-    border-radius: 8px;
-    font: Verdana;
-    font-size: 17px;
-}
-
-#thirdbuildmulti1:hover {
-  background-color: #b4e4ff;
 }
 
 div.tab {
