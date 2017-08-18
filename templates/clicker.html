@@ -1,17 +1,22 @@
     <!DOCTYPE html>
     <html>
     <body>
+    <meta charset="UTF-8">
 
     <!--Link to all CSS files -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/buttons.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/scores.css') }}">
 
-    <!--Link to JS files -->
+    <script>
+        var points = {{ user.points }};
+    </script>
+
+    <!--Link to JS files-->
     <script src="{{ url_for('static', filename='js/buildings.js') }}"></script>
 
 
-    <h1>Welcome {{user.email}}</h1>
+    <h1>Welcome {{ user.username }}</h1>
 
     <h3>Click to get started!</h3>
 
@@ -59,11 +64,11 @@
     <!-- make a div around all paragraphs displaying stats and display them -->
     <div class="displayscores">
       <div class="tab">
-        <button class="tablinks" onclick="switchtab(event, 'main')">Main Page</button>
+        <button class="tablinks" onclick="switchtab(event, 'main')" id="defaultOpen" >Main Page</button>
         <button class="tablinks" onclick="switchtab(event, 'stats')">Stats</button>
         <button class="tablinks" onclick="switchtab(event, 'achievements')">Achievements</button>
       </div>
-      
+
       <div id="main" class="tabcontent">
       <p id="pointdisplay"></p>
       <p id="multidisplay"></p>
@@ -118,7 +123,12 @@
       </table>
       </div>
     </div>
-    
+
+    <script>
+    // clicks on "main" to show by default
+    document.getElementById("defaultOpen").click();
+    </script>
+
     <!--<div id="changes">
       <p>Hello</p>
     </div>-->

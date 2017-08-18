@@ -1,9 +1,14 @@
 from database import Base
 from flask_security import UserMixin, RoleMixin
+from flask_security.forms import RegisterForm, StringField, Required
 from sqlalchemy import create_engine
 from sqlalchemy.orm import relationship, backref
 from sqlalchemy import Boolean, DateTime, Column, Integer, \
                        String, ForeignKey
+
+
+class ExtendedRegisterForm(RegisterForm):
+    username = StringField('Username', [Required()])
 
 
 class RolesUsers(Base):
@@ -26,6 +31,7 @@ class User(Base, UserMixin):
     email = Column(String(255), unique=True)
     username = Column(String(255))
     password = Column(String(255))
+    points = Column(Integer, default=5000)
     last_login_at = Column(DateTime())
     current_login_at = Column(DateTime())
     last_login_ip = Column(String(100))

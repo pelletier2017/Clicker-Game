@@ -2,10 +2,9 @@ from flask import Flask, render_template, request, redirect, url_for
 from flask_security import (login_required, Security, current_user,
                            SQLAlchemySessionUserDatastore)
 from database import db_session, init_db
-from models import User, Role
+from models import User, Role, ExtendedRegisterForm
 
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://postgres:kappa123@localhost/ChessUsers"
 app.config["SECRET_KEY"] = "super-secret"   # not secure
 app.config["SECURITY_REGISTERABLE"] = True
 app.config['SECURITY_PASSWORD_HASH'] = 'bcrypt'  # not secure
@@ -16,7 +15,8 @@ app.config['SECURITY_SEND_REGISTER_EMAIL'] = False
 
 # Setup Flask-Security
 user_datastore = SQLAlchemySessionUserDatastore(db_session, User, Role)
-security = Security(app, user_datastore)
+security = Security(app, user_datastore, register_form=ExtendedRegisterForm)
+
 
 """
 ### Un-comment when setting up database for first time
@@ -24,15 +24,15 @@ security = Security(app, user_datastore)
 @app.before_first_request
 def create_user():
     init_db()
-    user_datastore.create_user(email='matt@nobien.net', password='password')
+    user_datastore.create_user(email='admin5', password='password')
     db_session.commit()
 """
-
 
 # Views
 @app.route("/")
 @login_required
 def index():
+    print(url_for('static', filename='js/buildings.js'))
     return render_template("clicker.html", user=current_user)
 
 
@@ -44,12 +44,15 @@ def clicker(user_id):
     return render_template("clicker.html", id=user_id)
 
 
+"""
+# code from tutorial, not sure how to use it in current iteration
 @app.route("/post_user", methods=["POST"])
 def post_user():
     user = User(request.form["email"], request.form["password"])
     db.session.add(user)
     db.session.commit()
     return redirect(url_for("index"))
+"""
 
 if __name__ == "__main__":
     app.run()
