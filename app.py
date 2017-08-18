@@ -25,7 +25,8 @@ def create_user():
     init_email = 'admin'
     init_user = user_datastore.find_user(email=init_email)
     if init_user is None:
-        user_datastore.create_user(email=init_email, password='password')
+        user_datastore.create_user(email=init_email, username='admin',
+                                   password='password')
         db_session.commit()
 
 
