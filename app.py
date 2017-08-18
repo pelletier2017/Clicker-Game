@@ -1,8 +1,8 @@
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
-from flask import render_template, request, redirect, url_for
-from flask_security import (Security, SQLAlchemyUserDatastore, UserMixin,
-    RoleMixin, login_required)
+from flask import Flask, render_template, request, redirect, url_for
+from flask_security import (login_required, Security, current_user,
+                           SQLAlchemySessionUserDatastore)
+from database import db_session, init_db
+from models import User, Role
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://postgres:kappa123@localhost/ChessUsers"
@@ -10,50 +10,43 @@ app.config["SECRET_KEY"] = "super-secret"   # not secure
 app.config["SECURITY_REGISTERABLE"] = True
 app.config['SECURITY_PASSWORD_HASH'] = 'bcrypt'  # not secure
 app.config['SECURITY_PASSWORD_SALT'] = '$2a$16$PnnIgfMwkOjGX4SkHqSOPO'  # not secure
+app.config['DEBUG'] = True
+app.config['SECURITY_SEND_REGISTER_EMAIL'] = False
 
-app.debug = True
-db = SQLAlchemy(app)
-
-# Define models
-roles_users = db.Table('roles_users',
-        db.Column('user_id', db.Integer(), db.ForeignKey('user.id')),
-        db.Column('role_id', db.Integer(), db.ForeignKey('role.id')))
-
-
-class Role(db.Model, RoleMixin):
-    id = db.Column(db.Integer(), primary_key=True)
-    name = db.Column(db.String(80), unique=True)
-    description = db.Column(db.String(255))
-
-
-class User(db.Model, UserMixin):
-    id = db.Column(db.Integer, primary_key=True)
-    email = db.Column(db.String(255), unique=True)
-    password = db.Column(db.String(255))
-    active = db.Column(db.Boolean())
-    confirmed_at = db.Column(db.DateTime())
-    roles = db.relationship('Role', secondary=roles_users,
-                            backref=db.backref('users', lazy='dynamic'))
 
 # Setup Flask-Security
-user_datastore = SQLAlchemyUserDatastore(db, User, Role)
+user_datastore = SQLAlchemySessionUserDatastore(db_session, User, Role)
 security = Security(app, user_datastore)
 
+"""
+### Un-comment when setting up database for first time
+# Create a user to test with
+@app.before_first_request
+def create_user():
+    init_db()
+    user_datastore.create_user(email='matt@nobien.net', password='password')
+    db_session.commit()
+"""
 
+
+# Views
 @app.route("/")
+@login_required
 def index():
-    return render_template("clicker.html")
+    return render_template("clicker.html", user=current_user)
 
 
-@app.route("/profile/<username>")
-def profile(username):
-    user = User.query.filter_by(username=username).first()
-    return render_template("profile.html", user=user)
+# example code for later use
+@app.route("/clicker/<user_id>")
+@login_required
+def clicker(user_id):
+    user_id = User.query.filter_by(id=user_id).first()
+    return render_template("clicker.html", id=user_id)
 
 
 @app.route("/post_user", methods=["POST"])
 def post_user():
-    user = User(request.form["username"], request.form["email"])
+    user = User(request.form["email"], request.form["password"])
     db.session.add(user)
     db.session.commit()
     return redirect(url_for("index"))

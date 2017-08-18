@@ -2,16 +2,19 @@
     <html>
     <body>
 
-    <p>Click to get started!</p>
-    
     <!--Link to all CSS files -->
-    <link rel="stylesheet" href="\static\css\buttons.css">
-    <!--<link rel="stylesheet" href="displayscores.css">-->
-    <link rel="stylesheet" href="\static\css\layout.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/buttons.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/scores.css') }}">
 
     <!--Link to JS files -->
-    <script src="\static\js\buildings.js"></script>
-    
+    <script src="{{ url_for('static', filename='js/buildings.js') }}"></script>
+
+
+    <h1>Welcome {{user.email}}</h1>
+
+    <h3>Click to get started!</h3>
+
     <!-- make all buttons -->
 
     <button id="addpoints"  class="button zero" onclick="addPoints()" background-color: red>Slice some bread!</button>
