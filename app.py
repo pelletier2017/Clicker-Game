@@ -18,15 +18,16 @@ user_datastore = SQLAlchemySessionUserDatastore(db_session, User, Role)
 security = Security(app, user_datastore, register_form=ExtendedRegisterForm)
 
 
-"""
-### Un-comment when setting up database for first time
-# Create a user to test with
+# Initialize the database
 @app.before_first_request
 def create_user():
     init_db()
-    user_datastore.create_user(email='admin5', password='password')
-    db_session.commit()
-"""
+    init_email = 'admin'
+    init_user = user_datastore.find_user(email=init_email)
+    if init_user is None:
+        user_datastore.create_user(email=init_email, password='password')
+        db_session.commit()
+
 
 # Views
 @app.route("/")
@@ -37,6 +38,7 @@ def index():
 
 
 # example code for later use
+"""
 @app.route("/clicker/<user_id>")
 @login_required
 def clicker(user_id):
@@ -44,7 +46,6 @@ def clicker(user_id):
     return render_template("clicker.html", id=user_id)
 
 
-"""
 # code from tutorial, not sure how to use it in current iteration
 @app.route("/post_user", methods=["POST"])
 def post_user():

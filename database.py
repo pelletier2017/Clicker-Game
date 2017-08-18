@@ -2,6 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
+# temporary password
 engine = create_engine("postgresql://postgres:kappa123@localhost/TestBread",
                        convert_unicode=True)
 db_session = scoped_session(sessionmaker(autocommit=False,
