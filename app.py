@@ -32,6 +32,7 @@ def create_user():
 
 # Views
 @app.route("/")
+@app.route("/index")
 @login_required
 def index():
     print(url_for('static', filename='js/buildings.js'))
