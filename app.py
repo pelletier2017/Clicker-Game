@@ -1,14 +1,19 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, redirect
 from flask_security import (login_required, Security, current_user,
-                           SQLAlchemySessionUserDatastore)
+                            SQLAlchemySessionUserDatastore)
 from database import db_session, init_db
 from models import User, Role, ExtendedRegisterForm
 
+# setup flask
 app = Flask(__name__)
-app.config["SECRET_KEY"] = "super-secret"   # not secure
 app.config["SECURITY_REGISTERABLE"] = True
-app.config['SECURITY_PASSWORD_HASH'] = 'bcrypt'  # not secure
-app.config['SECURITY_PASSWORD_SALT'] = '$2a$16$PnnIgfMwkOjGX4SkHqSOPO'  # not secure
+
+# following not secure for production
+app.config["SECRET_KEY"] = "super-secret"
+app.config['SECURITY_PASSWORD_HASH'] = 'bcrypt'
+app.config['SECURITY_PASSWORD_SALT'] = '$2a$16$PnnIgfMwkOjGX4SkHqSOPO'
+
+# following for development only
 app.config['DEBUG'] = True
 app.config['SECURITY_SEND_REGISTER_EMAIL'] = False
 
@@ -24,6 +29,7 @@ def create_user():
     init_db()
     init_email = 'admin'
     init_user = user_datastore.find_user(email=init_email)
+    # if user already exists, do nothing
     if init_user is None:
         user_datastore.create_user(email=init_email, username='admin',
                                    password='password')
@@ -38,6 +44,7 @@ def index():
     return render_template("clicker.html", user=current_user)
 
 
+# temporary home page to preview bootstrap
 @app.route("/home")
 def home():
     return render_template("bootstrap_index.html")
