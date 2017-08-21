@@ -24,11 +24,10 @@ python app.py
 
 Use a browser to go to the path of locally hosted website. The default will be http://127.0.0.1:5000/.
 
-The default login is
+Default Login
 
-user: admin
-
-password: password
+* user: admin
+* password: password
 
 See current views:
 * http://127.0.0.1:5000/
@@ -50,7 +49,7 @@ Deployment will be coming soon.
 
 ## Built With
 
-* [Flask](http://flask.pocoo.org/) - Web Framework used.
+* [Flask](http://flask.pocoo.org/) - Python Web micro-framework
 
 ## Contributing
 
