@@ -1,3 +1,16 @@
+<!-- Bootstrap core CSS -->
+<link href="{{ url_for('static', filename='bootstrap_template/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+
+<!-- Custom fonts for this template -->
+
+<link href="{{ url_for('static', filename='bootstrap_template/vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+<!-- Custom styles for this template -->
+<link href="{{ url_for('static', filename='bootstrap_template/css/freelancer.min.css') }}" rel="stylesheet">
+
+
 {% from "security/_macros.html" import render_field_with_errors, render_field %}
 {% include "security/_messages.html" %}
 <h1>{{ _('Register') }}</h1>
@@ -12,3 +25,4 @@
   {{ render_field(register_user_form.submit) }}
 </form>
 {% include "security/_menu.html" %}
+

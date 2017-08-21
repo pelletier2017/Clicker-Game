@@ -35,8 +35,12 @@ def create_user():
 @app.route("/index")
 @login_required
 def index():
-    print(url_for('static', filename='js/buildings.js'))
     return render_template("clicker.html", user=current_user)
+
+
+@app.route("/home")
+def home():
+    return render_template("bootstrap_index.html")
 
 
 # example code for later use
