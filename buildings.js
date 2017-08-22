@@ -8,7 +8,7 @@
     var b1count = 0;
     var b1multi = 1;
     var b1pps = (b1count * 1) * b1multi;
-    var b2cost = 1000;
+    var b2cost = 750;
     var b2count = 0;
     var b2multi = 1;
     var b2pps = (b2count * 4) * b2multi;
@@ -35,7 +35,7 @@
     var b1upg = 0;
     var b1m1cost = 500;
     var b2upg = 0;
-    var b2m1cost = 2500;
+    var b2m1cost = 1900;
     var b3upg = 0;
     var b3m1cost = 5000;
     var b4upg = 0;
@@ -156,13 +156,15 @@
         //var b1pps = (b1count * b1multi);
         updatepps();
         document.getElementById("b1").innerHTML = "You have " + b1count + " bread slicers! Making " + b1pps + " slices of bread per second. Each building is making " + 1 * b1multi + " slices of bread per second!";
-        firstbuild.innerText = "Sliced bread maker. Cost " + Math.round(b1cost);
+        firstbuild.innerText = "+" + b1multi + "PPS. Cost: " + Math.round(b1cost);
         updatepps();
         
+        if (b2count == 0) {
         //display second building
         var secondbuild = document.getElementById("secondbuild");
         secondbuild.style.display = "inline";
         secondbuild.innerText = "Sandwich bread machine. Cost: " + Math.round(b2cost);
+        }
         
       }
     }
@@ -178,13 +180,15 @@
         //var b2pps = (b2count * 4) * b2multi;
         updatepps();
         document.getElementById("b2").innerHTML = "You have " + b2count + " sandwich bread machines! Making " + b2pps + " sandwich buns per second. Each machine is making " + 4 * b2multi + " sandwich buns per second!";
-        secondbuild.innerText = "Sandwich bread machine. Cost " + Math.round(b2cost);
+        secondbuild.innerText = secondbuild.innerText = "+" + b2multi * 4 + "PPS. Cost: " + Math.round(b2cost);
         updatepps();
         
+        if (b3count == 0) {
         //display third building
         var thirdbuild = document.getElementById("thirdbuild");
         thirdbuild.style.display = "inline";
         thirdbuild.innerText = "Crouton maker. Cost " + Math.round(b3cost);
+        }
       }
     }
     
@@ -199,13 +203,15 @@
         //var b3pps = (b3count * 10) * b3multi;
         updatepps();
         document.getElementById("b3").innerHTML = "You have " + b3count + " crouton makers! Making " + b3pps + " croutons per second. Each crouton maker is making " + 10 * b3multi + " points per second!"
-        thirdbuild.innerText = "Crouton maker. Cost " + Math.round(b3cost);
+        thirdbuild.innerText = thirdbuild.innerText = "+" + b3multi * 10 + "PPS. Cost: " + Math.round(b3cost);
         updatepps();
         
+        if (b4count == 0) {
         //display fourth building
         var fourthbuild = document.getElementById("fourthbuild");
         fourthbuild.style.display = "inline";
         fourthbuild.innerText = "Roll factory. Cost " + Math.round(b4cost);
+        }
       }
     }
     
@@ -219,13 +225,15 @@
         var build4add = setInterval(build4points, 1000);
         updatepps();
         document.getElementById("b4").innerHTML = "You have " + b4count + " roll factories! Making " + b4pps + " rolls per second. Each building is making " + 24 * b4multi + " rolls per second!";
-        fourthbuild.innerText = "Roll factory. Cost " + Math.round(b4cost);
+        fourthbuild.innerText = fourthbuild.innerText = "+" + b4multi * 24 + "PPS. Cost: " + Math.round(b4cost);
         updatepps();
         
+        if (b5count == 0) {
         //display fifth building
         var fifthbuild = document.getElementById("fifthbuild");
         fifthbuild.style.display = "inline";
         fifthbuild.innerText = "Baguette oven. Cost " + Math.round(b5cost);
+        }
         
       }
     }
@@ -239,12 +247,14 @@
         var build5add = setInterval(build5points, 1000);
         updatepps();
         document.getElementById("b5").innerHTML = "You have " + b5count + " baguette ovens! Making " + b5pps + " baguettes per second. Each building is making " + 56 * b5multi + " baguettes per second!";
-        fifthbuild.innerText = "Baguette oven. Cost " + Math.round(b5cost);
+        fifthbuild.innerText = fifthbuild.innerText = "+" + b5multi * 56 + "PPS. Cost: " + Math.round(b5cost);
         updatepps();
         
+        if (b6count == 0) {
         var sixthbuild = document.getElementById("sixthbuild");
         sixthbuild.style.display = "inline";
         sixthbuild.innerText = "Bagel production line. Cost " + Math.round(b6cost);
+        }
       }
     }
     
@@ -257,12 +267,14 @@
         var build6add = setInterval(build6points, 1000);
         updatepps();
         document.getElementById("b6").innerHTML = "You have " + b6count + " bagel production lines! Making " + b6pps + " bagels per second. Each building is making " + 130 * b6multi + " bagels per second!";
-        sixthbuild.innerText = "Bagel production line. Cost " + Math.round(b6cost);
+        sixthbuild.innerText = sixthbuild.innerText = "+" + b6multi * 130 + "PPS. Cost: " + Math.round(b6cost);
         updatepps();
         
+        if (b7count == 0) {
         var seventhbuild = document.getElementById("seventhbuild")
         seventhbuild.style.display = "inline";
         seventhbuild.innerText = "Soft pretzel manufacturer. Cost " + Math.round(b7cost);
+        }
       }
     }
     
@@ -275,7 +287,7 @@
         var build7add = setInterval(build7points, 1000);
         updatepps();
         document.getElementById("b7").innerHTML = "You have " + b7count + " soft pretzel manufacturers! Making " + b7pps + " soft pretzels per second. Each building is making " + 315 * b7multi + " soft pretzels per second";
-        seventhbuild.innerText = "Soft pretzel manufacturer. Cost " + Math.round(b7cost);
+        seventhbuild.innerText = seventhbuild.innerText = "+" + b7multi * 315 + "PPS. Cost: " + Math.round(b7cost);
         updatepps();
       }
     }
@@ -340,42 +352,20 @@
         buyupgrade++;
         document.getElementById("multidisplay").innerHTML = "Your multiplier is: " + pointMulti;
         multiply3.style.display = "none";
+        
+        if (buyupgrade == 3) {
+          multiply4.style.display = "inline";
+        }
       }
     }
     
-    function build1multi1() {
-      if (points >= b1m1cost) {
-        points -= b1m1cost;
-        b1multi *= 2;
-        b1m1count++;
-        updatepps();
-        var build1multi1 = document.getElementById("firstbuildmulti1");
-        firstbuildmulti1.style.display = "none";
-        document.getElementById("b1").innerHTML = "You have " + b1count + " bread slicers! Making " + b1pps + " slices of bread per second. Each building is making " + 1 * b1multi + " sliced of bread per second!";
-      }
-    }
-    
-    function build2multi1() {
-      if (points >= b2m1cost) {
-        points -= b2m1cost;
-        b2multi *= 2;
-        b2m1count++;
-        updatepps();
-        var build2multi1 = document.getElementById("secondbuildmulti1");
-        secondbuildmulti1.style.display = "none";
-        document.getElementById("b2").innerHTML = "You have " + b2count + " of sandwich bread makers! Making " + b2pps + " sandwich buns per second. Each building is making " + 4 * b2multi + " sandwich buns per second!";
-      }
-    }
-    
-    function build3multi1() {
-      if (points >= b3m1cost) {
-        points -= b3m1cost;
-        b3multi *= 2;
-        b3m1count++;
-        updatepps();
-        var build3multi1 = document.getElementById("thirdbuildmulti1");
-        thirdbuildmulti1.style.display = "none";
-        document.getElementById("b3").innerHTML = "You have " + b3count + " crouton makers! Making " + b3pps + " croutons per second. Each crouton maker is making " + 10 * b3multi + " croutons per second!";
+    function fourthx2() {
+      if (buyupgrade == 3 && points >= 20000) {
+        pointMulti *= 2;
+        points -= 20000;
+        buyupgrade++;
+        document.getElementById("multidisplay").innerHTML = "Your multiplier is: " + pointMulti;
+        multiply4.style.display = "none";
       }
     }
     
@@ -414,6 +404,7 @@
         updatepps();
         b1c1.style.display = "none";
         document.getElementById("b1").innerHTML = "You have " + b1count + " bread slicers! Making " + b1pps + " slices of bread per second. Each building is making " + 1 * b1multi + " sliced of bread per second!";
+        firstbuild.innerText = "+" + b1multi + "PPS. Cost: " + Math.round(b1cost);
       }
     }
     
@@ -425,6 +416,7 @@
         updatepps();
         b2c1.style.display = "none";
         document.getElementById("b2").innerHTML = "You have " + b2count + " sandwich bread machines! Making " + b2pps + " sandwich buns per second. Each machine is making " + 4 * b2multi + " sandwich buns per second!";
+        secondbuild.innerText = secondbuild.innerText = "+" + b2multi * 4 + "PPS. Cost: " + Math.round(b2cost);
       }
     }
     
@@ -436,6 +428,7 @@
         updatepps();
         b3c1.style.display = "none";
         document.getElementById("b3").innerHTML = "You have " + b3count + " crouton makers! Making " + b3pps + " croutons per second. Each crouton maker is making " + 10 * b3multi + " points per second!"
+        thirdbuild.innerText = thirdbuild.innerText = "+" + b3multi * 10 + "PPS. Cost: " + Math.round(b3cost);
       }
     }
     
@@ -447,6 +440,7 @@
         updatepps();
         b4c1.style.display = "none";
         document.getElementById("b4").innerHTML = "You have " + b4count + " roll factories! Making " + b4pps + " rolls per second. Each building is making " + 24 * b4multi + " rolls per second!"
+        fourthbuild.innerText = fourthbuild.innerText = "+" + b4multi * 24 + "PPS. Cost: " + Math.round(b4cost);
       }
     }
     
@@ -458,6 +452,7 @@
         updatepps();
         b5c1.style.display = "none";
         document.getElementById("b5").innerHTML = "You have " + b5count + " baguette ovens! Making " + b5pps + " baguettes per second. Each building is making " + 56 * b5multi + " baguettes per second!";
+        fifthbuild.innerText = fifthbuild.innerText = "+" + b5multi * 56 + "PPS. Cost: " + Math.round(b5cost);
       }
     }
     
@@ -469,6 +464,7 @@
         updatepps();
         b6c1.style.display = "none";
         document.getElementById("b6").innerHTML = "You have " + b6count + " bagel production lines! Making " + b6pps + " bagels per second. Each building is making " + 130 * b6multi + " bagels per second!";
+        sixthbuild.innerText = sixthbuild.innerText = "+" + b6multi * 130 + "PPS. Cost: " + Math.round(b6cost);
       }
     }
     
@@ -480,6 +476,7 @@
         updatepps();
         b7c1.style.display = "none";
         document.getElementById("b3").innerHTML = "You have " + b3count + " crouton makers! Making " + b3pps + " croutons per second. Each crouton maker is making " + 10 * b3multi + " points per second!"
+        seventhbuild.innerText = seventhbuild.innerText = "+" + b7multi * 315 + "PPS. Cost: " + Math.round(b7cost);
       }
     }
     function updatepps(){
